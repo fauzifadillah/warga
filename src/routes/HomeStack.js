@@ -16,9 +16,9 @@ import Payment from '../screens/Payment/Payment';
 import Profile from '../screens/Profile/Profile'
 
 const screens = {
-  HomeScreen: {
-    screen: HomeScreen
-  },
+  // HomeScreen: {
+  //   screen: HomeScreen
+  // },
   Auth: {
     screen: Auth
   },
