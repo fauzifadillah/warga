@@ -6,6 +6,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image
 } from 'react-native';
 import { createAppContainer} from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
@@ -16,23 +17,55 @@ import Payment from '../screens/Payment/Payment';
 import Profile from '../screens/Profile/Profile'
 
 const screens = {
-  // HomeScreen: {
-  //   screen: HomeScreen
-  // },
   Auth: {
-    screen: Auth
+    screen: Auth,
+    navigationOptions: {
+      title: 'Aktivasi Akun',
+    }
+  },
+  HomeScreen: {
+    screen: HomeScreen
   },
   Invoice: {
-    screen: Invoice
+    screen: Invoice,
+    navigationOptions: {
+      title: 'History Pemesanan',
+    }
   },
   Payment: {
-    screen: Payment
+    screen: Payment,
+    navigationOptions: {
+      title: 'Pembayaran',
+    }
   },
   Profile: {
-    screen: Profile
+    screen: Profile,
+    navigationOptions: {
+      title: 'Edit Profil',
+    }
   }
 }
 
-const HomeStack = createStackNavigator(screens);
+const HomeStack = createStackNavigator(screens, {
+  defaultNavigationOptions: {
+    headerBackground: (
+      <Image
+        source={require('../assets/bg-header.png')}
+      />
+    ),
+    headerStyle: {
+      backgroundColor: '#2D54A0',
+      height: 120,
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontFamily: 'Open Sans',
+      fontSize: 24,
+      fontWeight: 'bold',
+      paddingTop: 63,
+      paddingBottom: 15,
+    },
+  }
+});
 
 export default createAppContainer(HomeStack);

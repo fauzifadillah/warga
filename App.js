@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Container, Header, Content, Card, CardItem, Text, Body } from 'native-base';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 
 import {
   LearnMoreLinks,
@@ -15,6 +15,13 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Navigator from './src/routes/HomeStack'
+
+import Auth from './src/screens/Auth/Auth'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
