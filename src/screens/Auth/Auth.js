@@ -19,7 +19,7 @@ import { useLinkProps } from '@react-navigation/native';
 
 const BACKGROUND = '#F4F6F9';
 
-const Auth = () => {
+const Auth = ({ navigation }) => {
   return (
     <View style={styles.page}>
       <Container>
@@ -28,25 +28,28 @@ const Auth = () => {
             <Text style={styles.neumorphismForm}>HEHE</Text>
           </Morph> */}
           <Form style={styles.form}>
-            <HeadingText>Nama Penjual Warung</HeadingText>
+            <HeadingText style={styles.paddingHeadingText}>Nama Penjual Warung</HeadingText>
               <DefaultInput/>
-            <HeadingText>No. KTP</HeadingText>
+            <HeadingText style={styles.paddingHeadingText}>No. KTP</HeadingText>
               <DefaultInput/>
-            <HeadingText>No. HP</HeadingText>
+            <HeadingText style={styles.paddingHeadingText}>No. HP</HeadingText>
               <DefaultInput/>
-            <HeadingText>Nama Warung</HeadingText>
+            <HeadingText style={styles.paddingHeadingText}>Nama Warung</HeadingText>
               <Autocomplete style={styles.roundedInput}
                 autoCapitalize="none"
                 autoCorrect={false}
                 inputContainerStyle={styles.autocompleteContainer}
               />
-            <HeadingText>Kode Aktivator</HeadingText>
+            <HeadingText style={styles.paddingHeadingText}>Kode Aktivator</HeadingText>
               <DefaultInput secureTextEntry={true}/>
           </Form>
           <Button
             bgColor="#2D54A0"
             color="#FFFFFF"
             brColor="transparent"
+            onPress={() =>
+              navigation.navigate('HomeScreen')
+            }
             >
             Daftarkan Akun
           </Button>
@@ -75,6 +78,9 @@ const styles = StyleSheet.create({
   roundedInput: {
     borderRadius: 6,
     height: 35
+  },
+  paddingHeadingText: {
+    paddingVertical: 15,
   }
 });
 

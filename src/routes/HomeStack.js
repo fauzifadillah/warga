@@ -17,14 +17,33 @@ import Payment from '../screens/Payment/Payment';
 import Profile from '../screens/Profile/Profile'
 
 const screens = {
+  HomeScreen: {
+    screen: HomeScreen,
+    navigationOptions: {
+      headerLeft: null,
+      headerTitle: (
+        <View>
+          <Text style={{fontSize: 14, fontWeight: 'bold', color: '#E6E2E6', paddingTop: 60}}>
+            Jumlah Setoran
+          </Text>
+          <Text style={{fontSize: 40, fontWeight: 'bold', color: '#FFFFFF'}}>
+            Rp50.000
+          </Text>
+          <Text style={{fontSize: 12, color: '#E6E2E6', paddingTop: 0}}>
+            Saldo Maksimum Rp500.000
+          </Text>
+        </View>
+      ),
+      headerTitleStyle: {
+        fontSize: 17,
+      }
+    }
+  },
   Auth: {
     screen: Auth,
     navigationOptions: {
       title: 'Aktivasi Akun',
     }
-  },
-  HomeScreen: {
-    screen: HomeScreen
   },
   Invoice: {
     screen: Invoice,
@@ -44,7 +63,7 @@ const screens = {
       title: 'Edit Profil',
     }
   }
-}
+};
 
 const HomeStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
@@ -65,7 +84,7 @@ const HomeStack = createStackNavigator(screens, {
       paddingTop: 63,
       paddingBottom: 15,
     },
-  }
+  },
 });
 
 export default createAppContainer(HomeStack);

@@ -8,31 +8,27 @@ import {
   StatusBar,
   Button
 } from 'react-native';
+import Container from '../../components/UI/Container/Container'
+import GamesList from '../../components/GamesList/GamesList'
 
-const HomeScreen = ({ navigation }) => {
+const HomeScreen = ( props ) => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Text>Ini laman Home</Text>
-        <Button 
-          onPress={() =>
-            navigation.navigate('Payment', {
-              category: 'Mobile Legends', 
-            })
-          }
-          title='Mobile Legends'
-        />
-        <Button 
-          onPress={() =>
-            navigation.navigate('Payment', {
-              category: 'Free Fire', 
-            })
-          }
-          title='Free Fire'
-        />
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles.page}>
+      <Container style={styles.marginTopContainer}>
+        <GamesList navigate={props.navigation.navigate} />
+      </Container>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  page: {
+    flex:1,
+    zIndex: 1
+  },
+  marginTopContainer: {
+    marginTop: 60,
+  }
+});
 
 export default HomeScreen;
