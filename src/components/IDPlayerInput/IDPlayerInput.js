@@ -13,52 +13,23 @@ import { Content, Card, CardItem, Body, Left, Right, Row, Col } from 'native-bas
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import { Neomorph } from 'react-native-neomorph-shadows';
-import Autocomplete from 'react-native-autocomplete-input';
 
-const PriceList = ( props ) => {
+const IDPlayerInput = ( props ) => {
   let contents = [];
 
   if (props.category === 'Mobile Legends') {
     contents.push(
       <View>
         <View style={styles.row}>
-          <Text style={styles.number}>2</Text>
-          <HeadingText>Pilih Nominal Top Up</HeadingText>
+          <Text style={styles.number}>1</Text>
+          <HeadingText>Masukkan User ID</HeadingText>
         </View>
         <View style={[styles.row, styles.rowMarginVertical]}>
-          <Col size={1}>
-            <Neomorph
-              darkShadowColor="#CFD1D4" // <- set this
-              lightShadowColor="#FFFFFF" // <- this
-              style={styles.neumorphismPrice}
-            >
-            </Neomorph>
+          <Col size={2}>
+            <DefaultInput style={styles.widthUserID}/>
           </Col>
           <Col size={1}>
-            <Neomorph
-              darkShadowColor="#CFD1D4" // <- set this
-              lightShadowColor="#FFFFFF" // <- this
-              style={styles.neumorphismPrice}
-            >
-            </Neomorph>
-          </Col>
-        </View>
-        <View style={[styles.row, styles.rowMarginVertical]}>
-          <Col size={1}>
-            <Neomorph
-              darkShadowColor="#CFD1D4" // <- set this
-              lightShadowColor="#FFFFFF" // <- this
-              style={styles.neumorphismPrice}
-            >
-            </Neomorph>
-          </Col>
-          <Col size={1}>
-            <Neomorph
-              darkShadowColor="#CFD1D4" // <- set this
-              lightShadowColor="#FFFFFF" // <- this
-              style={styles.neumorphismPrice}
-            >
-            </Neomorph>
+            <DefaultInput style={styles.widthServerID}/>
           </Col>
         </View>
       </View>
@@ -67,7 +38,15 @@ const PriceList = ( props ) => {
 
   else if (props.category === 'Free Fire') {
     contents.push(
-      
+      <View>
+        <View style={styles.row}>
+          <Text style={styles.number}>1</Text>
+          <HeadingText>Masukkan User ID</HeadingText>
+        </View>
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <DefaultInput style={styles.widthUserFull}/>
+        </View>
+      </View>
     )
   }
   
@@ -77,7 +56,7 @@ const PriceList = ( props ) => {
       lightShadowColor="#FFFFFF" // <- this
       style={styles.neumorphism}
     >
-      <View style={styles.containerPriceList}>
+      <View style={styles.containerIDPlayer}>
         {contents}
       </View>
     </Neomorph>
@@ -85,9 +64,10 @@ const PriceList = ( props ) => {
 };
 
 const styles = StyleSheet.create({
-  containerPriceList: {
+  containerIDPlayer: {
     flex: 1,
     zIndex: 1,
+    height: 95,
     borderRadius: 12,
     width: 320,
   },
@@ -100,8 +80,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   rowMarginVertical: {
-    marginTop: 58,
-    marginBottom: 35
+    marginTop: 28,
   },
   number: {
     backgroundColor: '#2D54A0',
@@ -116,28 +95,26 @@ const styles = StyleSheet.create({
     marginRight: 5,
     marginBottom: 10,
   },
+  widthUserID: {
+    width: 180,
+  },
+  widthServerID: {
+    width: 100,
+  },
+  widthUserFull: {
+    width: 292,
+  },
   neumorphism: {
     shadowOpacity: 1,
     shadowRadius: 5.9,
     borderRadius: 12,
     backgroundColor: '#F4F6F9',
-    height: 195,
     flex: 1,
     zIndex: 1,
     marginVertical: 20,
+    height: 95,
     width: 320,
-  },
-  neumorphismPrice: {
-    shadowOpacity: 1,
-    shadowRadius: 4,
-    borderRadius: 12,
-    backgroundColor: '#F4F6F9',
-    flex: 1,
-    zIndex: 1,
-    marginLeft: 10,
-    height: 68,
-    width: 131,
   },
 });
 
-export default PriceList;
+export default IDPlayerInput;

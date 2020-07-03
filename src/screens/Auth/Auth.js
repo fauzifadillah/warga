@@ -29,11 +29,11 @@ const Auth = ({ navigation }) => {
           </Morph> */}
           <Form style={styles.form}>
             <HeadingText style={styles.paddingHeadingText}>Nama Penjual Warung</HeadingText>
-              <DefaultInput/>
+              <DefaultInput style={styles.form}/>
             <HeadingText style={styles.paddingHeadingText}>No. KTP</HeadingText>
-              <DefaultInput/>
+              <DefaultInput style={styles.form}/>
             <HeadingText style={styles.paddingHeadingText}>No. HP</HeadingText>
-              <DefaultInput/>
+              <DefaultInput style={styles.form}/>
             <HeadingText style={styles.paddingHeadingText}>Nama Warung</HeadingText>
               <Autocomplete style={styles.roundedInput}
                 autoCapitalize="none"
@@ -41,7 +41,7 @@ const Auth = ({ navigation }) => {
                 inputContainerStyle={styles.autocompleteContainer}
               />
             <HeadingText style={styles.paddingHeadingText}>Kode Aktivator</HeadingText>
-              <DefaultInput secureTextEntry={true}/>
+              <DefaultInput secureTextEntry={true} style={styles.form}/>
           </Form>
           <Button
             bgColor="#2D54A0"

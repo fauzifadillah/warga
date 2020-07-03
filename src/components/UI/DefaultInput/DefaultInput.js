@@ -1,19 +1,18 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
-
-const Morph = props => {
-  return (
-    <View style={styles.morphTop}>
-      <View style={styles.morphBottom}>
-        {props.children}
-      </View>
-    </View>
-  )
-}
+import { Neomorph } from 'react-native-neomorph-shadows';
 
 const DefaultInput = props => {
   return (
-    <Morph>
+    <Neomorph
+      inner
+      darkShadowColor="#CFD1D4" // <- set this
+      lightShadowColor="#FFFFFF" // <- this
+      style={[
+        styles.neumorphism,
+        props.style,
+      ]}
+    >
       <TextInput
         underlineColorAndroid="transparent"
         {...props}
@@ -23,42 +22,26 @@ const DefaultInput = props => {
           props.valid || !props.touched ? null : styles.invalid
         ]}
       />
-    </Morph>
+    </Neomorph>
   );
 };
 
 const styles = StyleSheet.create({
   input: {
     width: '100%',
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: '#CFD1D4',
-    backgroundColor: '#FFFFFF',
     padding: 5,
-    height: 35
+    height: 35,
+  },
+  neumorphism: {
+    shadowOpacity: 1,
+    shadowRadius: 3,
+    borderRadius: 6,
+    backgroundColor: '#F4F6F9',
+    height: 35,
   },
   invalid: {
     backgroundColor: '#f9c0c0',
     borderColor: 'red'
-  },
-  neumorphismForm: {
-    margin: 24,
-    fontSize: 15,
-    backgroundColor: '#F4F6F9',
-  },
-  morphTop: {
-    padding: 2,
-    borderRadius: 6,
-    shadowOffset: {width:12, height:12},
-    shadowColor: '#CFD1D4',
-    shadowRadius: 12
-  },
-  morphBottom: {
-    padding: 2,
-    borderRadius: 6,
-    shadowOffset: {width:-12, height:-12},
-    shadowColor: '#FFFFFF',
-    shadowRadius: 12
   },
 });
 

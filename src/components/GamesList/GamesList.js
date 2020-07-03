@@ -10,7 +10,7 @@ import {
   Button,
   Image
 } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Body } from 'native-base';
+import { Content, Card, CardItem, Body, Left, Right } from 'native-base';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 
 // Image
@@ -27,9 +27,13 @@ import ComingSoon from '../../assets/coming_soon.jpg'
 const GamesList = ( props ) => {
   return (
     <ScrollView style={styles.page}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 25, paddingVertical: 15}}>
-        <HeadingText>Daftar Games</HeadingText>
-        <HeadingText>Rekap</HeadingText>
+      <View style={{flexDirection: 'row', marginHorizontal: 25, paddingVertical: 15}}>
+        <Left>
+          <HeadingText>Daftar Games</HeadingText>
+        </Left>        
+        <Right>
+          <HeadingText>Rekap</HeadingText>
+        </Right>
       </View>
       <View style={styles.row}>
         <TouchableOpacity style={styles.column}
@@ -116,16 +120,10 @@ const GamesList = ( props ) => {
           <Image source={GooglePlaystore} style={styles.imageGames}/>
           <HeadingText style={styles.textFontSize}>Google Playstore</HeadingText>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.column}
-          onPress={() =>
-            props.navigate('Payment', {
-              category: 'Mobile Legends', 
-            })
-          }
-        >
+        <View style={styles.column}>
           <Image source={ComingSoon} style={styles.imageGames}/>
           <HeadingText style={styles.textComingSoon}>Coming Soon</HeadingText>
-        </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -158,7 +156,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 96,
     width: 96,
-    backgroundColor: 'red'
   },
   textFontSize: {
     fontSize: 9,

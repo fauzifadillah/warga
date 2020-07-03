@@ -14,9 +14,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Navigator from './src/routes/HomeStack'
+import Navigator from './routes/HomeStack'
 
-import Auth from './src/screens/Auth/Auth'
+import Auth from './screens/Auth/Auth'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

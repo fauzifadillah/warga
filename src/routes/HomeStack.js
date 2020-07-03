@@ -55,6 +55,10 @@ const screens = {
     screen: Payment,
     navigationOptions: {
       title: 'Pembayaran',
+      headerTitleStyle: {
+        marginTop: 0
+      },
+      headerTitleAlign: 'center',
     }
   },
   Profile: {
