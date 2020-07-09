@@ -21,7 +21,13 @@ const IDPlayerInput = ( props ) => {
     contents.push(
       <View>
         <View style={styles.row}>
-          <Text style={styles.number}>1</Text>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphismNumber}
+          >
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
           <HeadingText>Masukkan User ID</HeadingText>
         </View>
         <View style={[styles.row, styles.rowMarginVertical]}>
@@ -51,15 +57,9 @@ const IDPlayerInput = ( props ) => {
   }
   
   return (
-    <Neomorph
-      darkShadowColor="#CFD1D4" // <- set this
-      lightShadowColor="#FFFFFF" // <- this
-      style={styles.neumorphism}
-    >
-      <View style={styles.containerIDPlayer}>
-        {contents}
-      </View>
-    </Neomorph>
+    <View style={styles.containerIDPlayer}>
+      {contents}
+    </View>
   );
 };
 
@@ -70,12 +70,14 @@ const styles = StyleSheet.create({
     height: 95,
     borderRadius: 12,
     width: 320,
+    marginTop: 20,
+    marginBottom: 5
   },
   row: {
     flex: 1,
     flexDirection: 'row',
     height: 96,
-    marginHorizontal: 15,
+    marginHorizontal: 5,
     marginVertical: 15,
     alignItems: 'center',
   },
@@ -93,10 +95,10 @@ const styles = StyleSheet.create({
     height: 41,
     color: '#ffffff',
     marginRight: 5,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   widthUserID: {
-    width: 180,
+    width: 195,
   },
   widthServerID: {
     width: 100,
@@ -114,6 +116,18 @@ const styles = StyleSheet.create({
     marginVertical: 20,
     height: 95,
     width: 320,
+  },
+  neumorphismNumber: {
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    borderRadius: 50,
+    backgroundColor: '#F4F6F9',
+    flex: 1,
+    zIndex: 1,
+    marginRight: 15,
+    marginBottom: 5,
+    height: 40,
+    width: 40,
   },
 });
 

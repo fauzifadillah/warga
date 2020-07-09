@@ -14,7 +14,8 @@ import Auth from '../screens/Auth/Auth';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import Invoice from '../screens/Invoice/Invoice';
 import Payment from '../screens/Payment/Payment';
-import Profile from '../screens/Profile/Profile'
+import Profile from '../screens/Profile/Profile';
+import TransactionStatus from '../screens/TransactionStatus/TransactionStatus'
 
 const screens = {
   HomeScreen: {
@@ -59,6 +60,20 @@ const screens = {
         marginTop: 0
       },
       headerTitleAlign: 'center',
+      headerStyle: {
+        height: 70,
+      },
+    }
+  },
+  TransactionStatus: {
+    screen: TransactionStatus,
+    navigationOptions: {
+      title: 'Pembayaran',
+      headerTitleStyle: {
+        marginTop: 0
+      },
+      headerTitleAlign: 'center',
+      // headerLeft: null
     }
   },
   Profile: {

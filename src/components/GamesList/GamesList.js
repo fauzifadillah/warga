@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { Content, Card, CardItem, Body, Left, Right } from 'native-base';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
+import { Neomorph } from 'react-native-neomorph-shadows';
 
 // Image
 import MobileLegends from '../../assets/mobile_legends.jpg'
@@ -43,7 +44,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={MobileLegends} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={MobileLegends} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Mobile Legends</HeadingText>
         </TouchableOpacity>
         <TouchableOpacity style={styles.column}
@@ -53,7 +60,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={FreeFire} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={FreeFire} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Free Fire</HeadingText>
         </TouchableOpacity>
         <TouchableOpacity style={styles.column}
@@ -63,7 +76,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={PUBGMobile} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={PUBGMobile} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>PUBG Mobile</HeadingText>
         </TouchableOpacity>
       </View>
@@ -75,7 +94,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={Valorant} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={Valorant} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>VALORANT</HeadingText>
         </TouchableOpacity>
         <TouchableOpacity style={styles.column}
@@ -85,7 +110,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={PointBlank} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={PointBlank} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Point Blank</HeadingText>
         </TouchableOpacity>
         <TouchableOpacity style={styles.column}
@@ -95,7 +126,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={CallOfDutyMobile} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={CallOfDutyMobile} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Call of Duty Mobile</HeadingText>
         </TouchableOpacity>
       </View>
@@ -107,7 +144,13 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={SteamWallet} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+           <Image source={SteamWallet} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Steam Wallet</HeadingText>
         </TouchableOpacity>
         <TouchableOpacity style={styles.column}
@@ -117,11 +160,23 @@ const GamesList = ( props ) => {
             })
           }
         >
-          <Image source={GooglePlaystore} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={GooglePlaystore} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textFontSize}>Google Playstore</HeadingText>
         </TouchableOpacity>
         <View style={styles.column}>
-          <Image source={ComingSoon} style={styles.imageGames}/>
+          <Neomorph
+            darkShadowColor="#CFD1D4" // <- set this
+            lightShadowColor="#FFFFFF" // <- this
+            style={styles.neumorphism}
+          >
+            <Image source={ComingSoon} style={styles.imageGames}/>
+          </Neomorph>
           <HeadingText style={styles.textComingSoon}>Coming Soon</HeadingText>
         </View>
       </View>
@@ -159,11 +214,20 @@ const styles = StyleSheet.create({
   },
   textFontSize: {
     fontSize: 9,
+    marginTop: 2,
   },
   textComingSoon: {
     fontSize: 9,
     color: '#F4F6F9'
-  }
+  },
+  neumorphism: {
+    shadowOpacity: 1,
+    shadowRadius: 4,
+    borderRadius: 10,
+    backgroundColor: '#F4F6F9',
+    height: 96,
+    width: 96,
+  },
 });
 
 
