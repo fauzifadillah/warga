@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Content, Form} from 'native-base';
 import {Neomorph} from 'react-native-neomorph-shadows';
 import Autocomplete from 'react-native-autocomplete-input';
@@ -61,10 +58,10 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderColor: 'red',
     backgroundColor: 'transparent',
-    marginLeft: 1
+    marginLeft: 1,
   },
   form: {
-    width: 320
+    width: 320,
   },
   neumorphism: {
     shadowOpacity: 1,
@@ -72,17 +69,17 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: '#F4F6F9',
     height: 35,
-    width: 320
+    width: 320,
   },
   paddingLabel: {
-    paddingVertical: 15
+    paddingVertical: 15,
   },
   page: {
     flex: 1,
-    zIndex: 1
+    zIndex: 1,
   },
   roundedInput: {
-    height: 37
+    height: 37,
   },
 });
 

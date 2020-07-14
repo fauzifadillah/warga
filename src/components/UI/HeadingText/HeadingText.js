@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Open Sans',
     fontSize: 18,
     color: '#081A59',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 });
 

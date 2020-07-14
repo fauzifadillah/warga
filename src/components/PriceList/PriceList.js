@@ -16,23 +16,12 @@ const PriceList = props => {
   });
 
   let contents = [];
-  let [heightContainer, setHeightContainer] = useState(155);
   const [users, setUsers] = useState([]);
 
   if (props.category === 'Mobile Legends') {
+    /* Mobile Legends */
     contents.push(
       <View>
-        {/* Label */}
-        <View style={styles.row}>
-          <Neomorph
-            darkShadowColor="#CFD1D4"
-            lightShadowColor="#FFFFFF"
-            style={styles.neumorphismNumber}>
-            <MainText style={styles.number}>2</MainText>
-          </Neomorph>
-          <Label>Pilih Nominal Top Up</Label>
-        </View>
-
         {/* Price */}
         {/* { users.map( (user,idx) => {
           return (      */}
@@ -61,10 +50,248 @@ const PriceList = props => {
       </View>,
     );
   } else if (props.category === 'Free Fire') {
-    contents.push();
+    /* Free Fire */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>3 Diamonds</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>3 Diamonds</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'PUBG Mobile') {
+    /* PUBG Mobile */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>150 Cash</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>150 Cash</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'Valorant') {
+    /* Valorant */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>300 Points</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>625 Points</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'Point Blank') {
+    /* Point Blank */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>1200 CASH</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>24000 CASH</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'Call of Duty') {
+    /* Call of Duty */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>31 CP</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>75000 CP</MainText>
+              <MainText style={styles.boldText}>Rp2.200</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'Steam Wallet') {
+    /* Steam Wallet */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>IDR 12.000</MainText>
+              <MainText style={styles.boldText}>Rp15.000</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>IDR 600.000</MainText>
+              <MainText style={styles.boldText}>Rp698.000</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
+  } else if (props.category === 'Google Playstore') {
+    /* Google Playstore */
+    contents.push(
+      <View>
+        {/* Price */}
+        {/* { users.map( (user,idx) => {
+          return (      */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>5.000 IDR</MainText>
+              <MainText style={styles.boldText}>Rp5.900</MainText>
+            </Neomorph>
+          </Col>
+          <Col size={1}>
+            <Neomorph
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
+              style={[styles.neumorphismPrice, styles.price]}>
+              <MainText>500.000 IDR</MainText>
+              <MainText style={styles.boldText}>Rp550.000</MainText>
+            </Neomorph>
+          </Col>
+        </View>
+        {/* );
+        })} */}
+      </View>,
+    );
   }
 
-  return <View style={styles.containerPriceList}>{contents}</View>;
+  return (
+    <View style={styles.containerPriceList}>
+      <View style={styles.row}>
+        <Neomorph
+          darkShadowColor="#CFD1D4"
+          lightShadowColor="#FFFFFF"
+          style={styles.neumorphismNumber}>
+          {props.category === 'Steam Wallet' ||
+          props.category === 'Google Playstore' ? (
+            <MainText style={styles.number}>1</MainText>
+          ) : (
+            <MainText style={styles.number}>2</MainText>
+          )}
+        </Neomorph>
+        {props.category === 'Steam Wallet' ||
+        props.category === 'Google Playstore' ? (
+          <Label>Pilih Voucher</Label>
+        ) : (
+          <Label>Pilih Nominal Top Up</Label>
+        )}
+      </View>
+      {contents}
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -76,6 +303,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     borderRadius: 12,
     width: 320,
+    marginTop: 20,
   },
   neumorphism: {
     shadowOpacity: 1,

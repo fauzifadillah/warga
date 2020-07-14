@@ -202,12 +202,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   imageGames: {
     borderRadius: 10,
     height: 96,
-    width: 96
+    width: 96,
   },
   neumorphism: {
     shadowOpacity: 1,
@@ -215,14 +215,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: '#F4F6F9',
     height: 96,
-    width: 96
+    width: 96,
   },
   page: {
     borderRadius: 25,
     flex: 1,
     zIndex: 1,
     width: '100%',
-    backgroundColor: '#F4F6F9'
+    backgroundColor: '#F4F6F9',
   },
   row: {
     flex: 1,
@@ -230,21 +230,21 @@ const styles = StyleSheet.create({
     height: 96,
     margin: 12,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   textFontSize: {
     fontSize: 9,
-    marginTop: 2
+    marginTop: 2,
   },
   textComingSoon: {
     fontSize: 9,
     marginTop: 2,
-    color: '#F4F6F9'
+    color: '#F4F6F9',
   },
   title: {
     flexDirection: 'row',
     marginHorizontal: 25,
-    paddingVertical: 20
+    paddingVertical: 20,
   },
 });
 

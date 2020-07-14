@@ -88,18 +88,18 @@ const TransactionStatus = ({navigation}) => {
 
 const styles = StyleSheet.create({
   containerInfo: {
-    alignItems: 'center'
+    alignItems: 'center',
   },
   marginTopContainer: {
-    marginTop: 20
+    marginTop: 20,
   },
   marginTopHeadingText: {
-    marginTop: 50
+    marginTop: 50,
   },
   marginButton: {
     paddingHorizontal: 15,
     backgroundColor: '#F4F6F9',
-    width: '100%'
+    width: '100%',
   },
   neumorphism: {
     shadowOpacity: 1,
@@ -110,17 +110,17 @@ const styles = StyleSheet.create({
     zIndex: 1,
     marginVertical: 20,
     height: 95,
-    width: 320
+    width: 320,
   },
   paddingVertical: {
-    paddingVertical: 20
+    paddingVertical: 20,
   },
   page: {
     flex: 1,
-    zIndex: 1
+    zIndex: 1,
   },
   rowMarginVertical: {
-    marginTop: 28
+    marginTop: 28,
   },
   row: {
     flex: 1,
@@ -128,11 +128,11 @@ const styles = StyleSheet.create({
     height: 96,
     marginHorizontal: 15,
     marginVertical: 15,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   textAlignCenter: {
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 });
 
 export default TransactionStatus;

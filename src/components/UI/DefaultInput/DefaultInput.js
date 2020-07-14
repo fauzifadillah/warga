@@ -28,18 +28,18 @@ const styles = StyleSheet.create({
     padding: 5,
     height: 35,
     color: '#081A59',
-    fontSize: 14
+    fontSize: 14,
   },
   neumorphism: {
     shadowOpacity: 1,
     shadowRadius: 3,
     borderRadius: 6,
     backgroundColor: '#F4F6F9',
-    height: 35
+    height: 35,
   },
   invalid: {
     backgroundColor: '#f9c0c0',
-    borderColor: 'red'
+    borderColor: 'red',
   },
 });
 

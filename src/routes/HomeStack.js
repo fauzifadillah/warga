@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Auth from '../screens/Auth/Auth';
@@ -17,7 +13,7 @@ const screens = {
   Auth: {
     screen: Auth,
     navigationOptions: {
-      title: 'Aktivasi Akun'
+      title: 'Aktivasi Akun',
     },
   },
   HomeScreen: {
@@ -44,14 +40,14 @@ const screens = {
         </View>
       ),
       headerTitleStyle: {
-        fontSize: 17
+        fontSize: 17,
       },
     },
   },
   Invoice: {
     screen: Invoice,
     navigationOptions: {
-      title: 'History Pemesanan'
+      title: 'History Pemesanan',
     },
   },
   Payment: {
@@ -59,11 +55,11 @@ const screens = {
     navigationOptions: {
       title: 'Pembayaran',
       headerTitleStyle: {
-        marginTop: 0
+        marginTop: 0,
       },
       headerTitleAlign: 'center',
       headerStyle: {
-        height: 70
+        height: 70,
       },
     },
   },
@@ -72,12 +68,12 @@ const screens = {
     navigationOptions: {
       title: 'Pembayaran',
       headerTitleStyle: {
-        marginTop: 0
+        marginTop: 0,
       },
       headerTitleAlign: 'center',
       headerLeft: null,
       headerStyle: {
-        height: 70
+        height: 70,
       },
     },
   },
@@ -86,7 +82,7 @@ const screens = {
     navigationOptions: {
       title: 'Edit Profil',
     },
-  }
+  },
 };
 
 const HomeStack = createStackNavigator(screens, {
@@ -96,7 +92,7 @@ const HomeStack = createStackNavigator(screens, {
     ),
     headerStyle: {
       backgroundColor: '#2D54A0',
-      height: 120
+      height: 120,
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -104,8 +100,8 @@ const HomeStack = createStackNavigator(screens, {
       fontSize: 24,
       fontWeight: 'bold',
       paddingTop: 63,
-      paddingBottom: 15
-    }
+      paddingBottom: 15,
+    },
   },
 });
 

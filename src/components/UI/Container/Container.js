@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderTopLeftRadius: 25,
-    borderTopRightRadius: 25
+    borderTopRightRadius: 25,
   },
 });
 export default Container;

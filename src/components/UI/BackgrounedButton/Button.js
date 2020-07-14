@@ -50,14 +50,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 47,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   disabled: {
     backgroundColor: '#eee',
-    borderColor: '#aaa'
+    borderColor: '#aaa',
   },
   disabledText: {
-    color: '#aaa'
+    color: '#aaa',
   },
   neumorphism: {
     shadowOpacity: 1,
@@ -68,12 +68,12 @@ const styles = StyleSheet.create({
     width: 320,
     margin: 5,
     marginTop: 35,
-    marginBottom: 100
+    marginBottom: 100,
   },
   textButton: {
     color: '#FFFFFF',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 });
 
 export default Button;

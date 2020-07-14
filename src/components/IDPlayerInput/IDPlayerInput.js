@@ -9,6 +9,7 @@ const IDPlayerInput = props => {
   let contents = [];
 
   if (props.category === 'Mobile Legends') {
+    /* Mobile Legends */
     contents.push(
       <View>
         {/* Label */}
@@ -34,12 +35,102 @@ const IDPlayerInput = props => {
       </View>,
     );
   } else if (props.category === 'Free Fire') {
+    /* Free Fire */
     contents.push(
       <View>
         {/* Label */}
         <View style={styles.row}>
-          <Text style={styles.number}>1</Text>
-          <Label>Masukkan User ID</Label>
+          <Neomorph
+            darkShadowColor="#CFD1D4"
+            lightShadowColor="#FFFFFF"
+            style={styles.neumorphismNumber}>
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
+          <Label>Masukkan Player ID</Label>
+        </View>
+
+        {/* Input Field */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <DefaultInput style={styles.widthUserFull} />
+        </View>
+      </View>,
+    );
+  } else if (props.category === 'PUBG Mobile') {
+    /* PUBG Mobile */
+    contents.push(
+      <View>
+        {/* Label */}
+        <View style={styles.row}>
+          <Neomorph
+            darkShadowColor="#CFD1D4"
+            lightShadowColor="#FFFFFF"
+            style={styles.neumorphismNumber}>
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
+          <Label>Masukkan ID Pemain</Label>
+        </View>
+
+        {/* Input Field */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <DefaultInput style={styles.widthUserFull} />
+        </View>
+      </View>,
+    );
+  } else if (props.category === 'Valorant') {
+    /* Valorant */
+    contents.push(
+      <View>
+        {/* Label */}
+        <View style={styles.row}>
+          <Neomorph
+            darkShadowColor="#CFD1D4"
+            lightShadowColor="#FFFFFF"
+            style={styles.neumorphismNumber}>
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
+          <Label>Masukkan Username</Label>
+        </View>
+
+        {/* Input Field */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <DefaultInput style={styles.widthUserFull} />
+        </View>
+      </View>,
+    );
+  } else if (props.category === 'Point Blank') {
+    /* Point Blank */
+    contents.push(
+      <View>
+        {/* Label */}
+        <View style={styles.row}>
+          <Neomorph
+            darkShadowColor="#CFD1D4"
+            lightShadowColor="#FFFFFF"
+            style={styles.neumorphismNumber}>
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
+          <Label>Masukkan ID</Label>
+        </View>
+
+        {/* Input Field */}
+        <View style={[styles.row, styles.rowMarginVertical]}>
+          <DefaultInput style={styles.widthUserFull} />
+        </View>
+      </View>,
+    );
+  } else if (props.category === 'Call of Duty') {
+    /* Call of Duty */
+    contents.push(
+      <View>
+        {/* Label */}
+        <View style={styles.row}>
+          <Neomorph
+            darkShadowColor="#CFD1D4"
+            lightShadowColor="#FFFFFF"
+            style={styles.neumorphismNumber}>
+            <Text style={styles.number}>1</Text>
+          </Neomorph>
+          <Label>Masukkan OpenID</Label>
         </View>
 
         {/* Input Field */}
@@ -61,7 +152,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     width: 320,
     marginTop: 20,
-    marginBottom: 5,
+    marginBottom: -15,
   },
   neumorphism: {
     shadowOpacity: 1,
