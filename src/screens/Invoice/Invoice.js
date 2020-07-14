@@ -6,13 +6,12 @@ import {
   View,
   Text,
   StatusBar,
-  Button
+  Button,
 } from 'react-native';
-import { createAppContainer} from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
-
-const Invoice = ({ navigation }) => {
+const Invoice = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>

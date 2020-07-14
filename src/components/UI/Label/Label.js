@@ -1,19 +1,19 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-const HeadingText = props => (
-  <Text {...props} style={[styles.HeadingText, props.style]}>
+const Label = props => (
+  <Text {...props} style={[styles.Label, props.style]}>
     {props.children}
   </Text>
 );
 
 const styles = StyleSheet.create({
-  HeadingText: {
+  Label: {
     fontFamily: 'Open Sans',
-    fontSize: 18,
-    color: '#081A59',
+    fontSize: 14,
+    color: '#2D54A0',
     fontWeight: 'bold'
   },
 });
 
-export default HeadingText;
+export default Label;

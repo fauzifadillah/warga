@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProfileData = ({ navigation }) => {
+const ProfileData = ({navigation}) => {
   return (
     <ScrollView>
       <Text>Ini Component InvoiceList</Text>

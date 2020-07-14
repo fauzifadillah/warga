@@ -1,30 +1,38 @@
 import React from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
   Text,
-  StatusBar,
-  Image
+  Image,
 } from 'react-native';
-import { createAppContainer} from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 import Auth from '../screens/Auth/Auth';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import Invoice from '../screens/Invoice/Invoice';
 import Payment from '../screens/Payment/Payment';
 import Profile from '../screens/Profile/Profile';
-import TransactionStatus from '../screens/TransactionStatus/TransactionStatus'
+import TransactionStatus from '../screens/TransactionStatus/TransactionStatus';
 
 const screens = {
+  Auth: {
+    screen: Auth,
+    navigationOptions: {
+      title: 'Aktivasi Akun'
+    },
+  },
   HomeScreen: {
     screen: HomeScreen,
     navigationOptions: {
-      headerLeft: null,
-      headerTitle: (
+      headerLeft: () => null,
+      headerTitle: () => (
         <View>
-          <Text style={{fontSize: 14, fontWeight: 'bold', color: '#E6E2E6', paddingTop: 60}}>
+          <Text
+            style={{
+              fontSize: 14,
+              fontWeight: 'bold',
+              color: '#E6E2E6',
+              paddingTop: 60,
+            }}>
             Jumlah Setoran
           </Text>
           <Text style={{fontSize: 40, fontWeight: 'bold', color: '#FFFFFF'}}>
@@ -36,21 +44,15 @@ const screens = {
         </View>
       ),
       headerTitleStyle: {
-        fontSize: 17,
-      }
-    }
-  },
-  Auth: {
-    screen: Auth,
-    navigationOptions: {
-      title: 'Aktivasi Akun',
-    }
+        fontSize: 17
+      },
+    },
   },
   Invoice: {
     screen: Invoice,
     navigationOptions: {
-      title: 'History Pemesanan',
-    }
+      title: 'History Pemesanan'
+    },
   },
   Payment: {
     screen: Payment,
@@ -61,9 +63,9 @@ const screens = {
       },
       headerTitleAlign: 'center',
       headerStyle: {
-        height: 70,
+        height: 70
       },
-    }
+    },
   },
   TransactionStatus: {
     screen: TransactionStatus,
@@ -73,27 +75,28 @@ const screens = {
         marginTop: 0
       },
       headerTitleAlign: 'center',
-      // headerLeft: null
-    }
+      headerLeft: null,
+      headerStyle: {
+        height: 70
+      },
+    },
   },
   Profile: {
     screen: Profile,
     navigationOptions: {
       title: 'Edit Profil',
-    }
+    },
   }
 };
 
 const HomeStack = createStackNavigator(screens, {
   defaultNavigationOptions: {
-    headerBackground: (
-      <Image
-        source={require('../assets/bg-header.png')}
-      />
+    headerBackground: () => (
+      <Image source={require('../assets/bg-header.png')} />
     ),
     headerStyle: {
       backgroundColor: '#2D54A0',
-      height: 120,
+      height: 120
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -101,8 +104,8 @@ const HomeStack = createStackNavigator(screens, {
       fontSize: 24,
       fontWeight: 'bold',
       paddingTop: 63,
-      paddingBottom: 15,
-    },
+      paddingBottom: 15
+    }
   },
 });
 

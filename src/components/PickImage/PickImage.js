@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PickImage = ({ navigation }) => {
+const PickImage = ({navigation}) => {
   return (
     <ScrollView>
       <Text>Ini Component InvoiceList</Text>

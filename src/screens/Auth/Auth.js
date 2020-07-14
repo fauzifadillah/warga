@@ -1,64 +1,51 @@
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
-  Text,
-  StatusBar,
 } from 'react-native';
-import { Content, Form, Item, Input, Label } from 'native-base';
-import color from 'color'
-import Container from '../../components/UI/Container/Container'
-import HeadingText from '../../components/UI/HeadingText/HeadingText';
-import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
-import Button from '../../components/UI/BackgrounedButton/Button'
+import {Content, Form} from 'native-base';
+import {Neomorph} from 'react-native-neomorph-shadows';
 import Autocomplete from 'react-native-autocomplete-input';
-import { Neomorph } from 'react-native-neomorph-shadows';
-
-import { useLinkProps } from '@react-navigation/native';
+import Button from '../../components/UI/BackgrounedButton/Button';
+import Container from '../../components/UI/Container/Container';
+import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
+import Label from '../../components/UI/Label/Label';
 
 const BACKGROUND = '#F4F6F9';
 
-const Auth = ({ navigation }) => {
+const Auth = ({navigation}) => {
   return (
     <View style={styles.page}>
       <Container>
         <Content padder>
-          {/* <Morph>
-            <Text style={styles.neumorphismForm}>HEHE</Text>
-          </Morph> */}
           <Form style={styles.form}>
-            <HeadingText style={styles.paddingHeadingText}>Nama Penjual Warung</HeadingText>
-              <DefaultInput style={styles.form}/>
-            <HeadingText style={styles.paddingHeadingText}>No. KTP</HeadingText>
-              <DefaultInput style={styles.form}/>
-            <HeadingText style={styles.paddingHeadingText}>No. HP</HeadingText>
-              <DefaultInput style={styles.form}/>
-            <HeadingText style={styles.paddingHeadingText}>Nama Warung</HeadingText>
-              <Neomorph
-                inner
-                darkShadowColor="#CFD1D4" // <- set this
-                lightShadowColor="#FFFFFF" // <- this
-                style={styles.neumorphism}
-              >
-                <Autocomplete style={styles.roundedInput}
-                  autoCapitalize="none"
-                  autoCorrect={false}
-                  inputContainerStyle={styles.autocompleteContainer}
-                />
-              </Neomorph>
-            <HeadingText style={styles.paddingHeadingText}>Kode Aktivator</HeadingText>
-              <DefaultInput secureTextEntry={true} style={styles.form}/>
+            <Label style={styles.paddingLabel}>Nama Penjual Warung</Label>
+            <DefaultInput style={styles.form} />
+            <Label style={styles.paddingLabel}>No. KTP</Label>
+            <DefaultInput style={styles.form} />
+            <Label style={styles.paddingLabel}>No. HP</Label>
+            <DefaultInput style={styles.form} />
+            <Label style={styles.paddingLabel}>Nama Warung</Label>
+            <Neomorph
+              inner
+              darkShadowColor="#CFD1D4" // <- set this
+              lightShadowColor="#FFFFFF" // <- this
+              style={styles.neumorphism}>
+              <Autocomplete
+                style={styles.roundedInput}
+                autoCapitalize="none"
+                autoCorrect={false}
+                inputContainerStyle={styles.autocompleteContainer}
+              />
+            </Neomorph>
+            <Label style={styles.paddingLabel}>Kode Aktivator</Label>
+            <DefaultInput secureTextEntry={true} style={styles.form} />
           </Form>
           <Button
             bgColor="#2D54A0"
             color="#FFFFFF"
             brColor="transparent"
-            onPress={() =>
-              navigation.navigate('HomeScreen')
-            }
-            >
+            onPress={() => navigation.navigate('HomeScreen')}>
             Daftarkan Akun
           </Button>
         </Content>
@@ -68,13 +55,6 @@ const Auth = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  page: {
-    flex:1,
-    zIndex: 1
-  },
-  form: {
-    width: 320
-  },
   autocompleteContainer: {
     width: '97.3%',
     borderRadius: 6,
@@ -83,11 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     marginLeft: 1
   },
-  roundedInput: {
-    height: 37,
-  },
-  paddingHeadingText: {
-    paddingVertical: 15,
+  form: {
+    width: 320
   },
   neumorphism: {
     shadowOpacity: 1,
@@ -95,7 +72,17 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     backgroundColor: '#F4F6F9',
     height: 35,
-    width: 320,
+    width: 320
+  },
+  paddingLabel: {
+    paddingVertical: 15
+  },
+  page: {
+    flex: 1,
+    zIndex: 1
+  },
+  roundedInput: {
+    height: 37
   },
 });
 

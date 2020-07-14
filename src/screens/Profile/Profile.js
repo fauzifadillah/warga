@@ -6,10 +6,10 @@ import {
   View,
   Text,
   StatusBar,
-  Button
+  Button,
 } from 'react-native';
 
-const Profile = ({ navigation }) => {
+const Profile = ({navigation}) => {
   return (
     <SafeAreaView>
       <ScrollView>

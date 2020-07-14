@@ -1,19 +1,19 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-const HeadingText = props => (
-  <Text {...props} style={[styles.HeadingText, props.style]}>
+const MainText = props => (
+  <Text {...props} style={[styles.MainText, props.style]}>
     {props.children}
   </Text>
 );
 
 const styles = StyleSheet.create({
-  HeadingText: {
+  MainText: {
     fontFamily: 'Open Sans',
-    fontSize: 18,
+    fontSize: 16,
     color: '#081A59',
-    fontWeight: 'bold'
+    lineHeight: 25
   },
 });
 
-export default HeadingText;
+export default MainText;
