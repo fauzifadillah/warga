@@ -1,28 +1,13 @@
 import React from 'react';
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
   View,
   Text,
   Image,
-  StatusBar,
 } from 'react-native';
-import {
-  Content,
-  Card,
-  CardItem,
-  Body,
-  Left,
-  Right,
-  Row,
-  Col,
-} from 'native-base';
 import Label from '../../components/UI/Label/Label';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import MainText from '../../components/UI/MainText/MainText';
-import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
-import {Neomorph} from 'react-native-neomorph-shadows';
 import Container from '../../components/UI/Container/Container';
 import Button from '../../components/UI/BackgrounedButton/Button';
 import SuccessImage from '../../assets/SuccessImage.png';
