@@ -25,8 +25,8 @@ const Auth = ({navigation}) => {
             <Label style={styles.paddingLabel}>Nama Warung</Label>
             <Neomorph
               inner
-              darkShadowColor="#CFD1D4" // <- set this
-              lightShadowColor="#FFFFFF" // <- this
+              darkShadowColor="#CFD1D4"
+              lightShadowColor="#FFFFFF"
               style={styles.neumorphism}>
               <Autocomplete
                 style={styles.roundedInput}

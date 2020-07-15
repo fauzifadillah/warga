@@ -31,15 +31,21 @@ const GamesList = props => {
           <HeadingText>Daftar Games</HeadingText>
         </Left>
         <Right>
-          <Label>
-            Rekap
-            {/* <Icon
-              iconStyle={{margin: 100}}
-              name="arrow-right"
-              size={15}
-              color="#2D54A0"
-            /> */}
-          </Label>
+          <TouchableOpacity
+            style={styles.column}
+            onPress={() =>
+              props.navigate('Invoice')
+            }>
+            <Label>
+              Rekap
+              {/* <Icon
+                iconStyle={{margin: 100}}
+                name="arrow-right"
+                size={15}
+                color="#2D54A0"
+              /> */}
+            </Label>
+          </TouchableOpacity>
         </Right>
       </View>
       <View style={styles.row}>

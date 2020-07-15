@@ -1,24 +1,26 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Button,
-} from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
+import {StyleSheet, View} from 'react-native';
+import Container from '../../components/UI/Container/Container';
+import InvoiceList from '../../components/InvoiceList/InvoiceList';
 
-const Invoice = ({navigation}) => {
+const Invoice = () => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Text>Ini Laman Invoice</Text>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles.page}>
+      <Container style={styles.marginTopContainer}>
+        <InvoiceList />
+      </Container>
+    </View>
   );
 };
+
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    zIndex: 1,
+  },
+  marginTopContainer: {
+    marginTop: 10,
+  },
+});
 
 export default Invoice;

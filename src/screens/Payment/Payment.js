@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
     height: 141,
     width: 340,
-    marginTop: 30,
+    marginTop: 10,
   },
   marginButton: {
     paddingHorizontal: 15,

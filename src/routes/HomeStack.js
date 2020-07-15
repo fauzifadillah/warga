@@ -47,7 +47,14 @@ const screens = {
   Invoice: {
     screen: Invoice,
     navigationOptions: {
-      title: 'History Pemesanan',
+      title: 'Rekap Pemesanan',
+      headerTitleStyle: {
+        marginTop: 0,
+      },
+      headerTitleAlign: 'center',
+      headerStyle: {
+        height: 70,
+      },
     },
   },
   Payment: {
